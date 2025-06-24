@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand Karaj - Wedding Ceremony | Ternjyot & Michael | September 26, 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #F4E4BC;
+            --accent-red: #B8860B;
+            --sacred-saffron: #FF9933;
+            --pure-white: #FFFFFF;
+            --deep-navy: #1A1B3E;
+            --soft-white: #FEFEFE;
+            --warm-gray: #F8F6F3;
+            --text-dark: #2C2C2C;
+            --text-light: #6B7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--sacred-saffron);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--sacred-saffron);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.85) 0%, rgba(184, 134, 11, 0.75) 50%, rgba(212, 175, 55, 0.85) 100%),
+                        url('images/plymouth-mi-1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(255, 255, 255, 0.03) 1deg, transparent 2deg);
+            animation: rotate 60s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .gurmukhi {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            opacity: 1;
+            color: #FFD700;
+            line-height: 1.8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .translation {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(45deg, #FFFFFF, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .invitation {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #FFD700;
+            margin-bottom: 3rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--sacred-saffron);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 6rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-title .decoration {
+            width: 60px;
+            height: 3px;
+            background: var(--sacred-saffron);
+            margin: 0 auto;
+        }
+
+        /* Dress Code Section */
+        .dress-code {
+            background: var(--warm-gray);
+        }
+
+        .dress-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .dress-content h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .dress-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            background: white;
+            position: relative;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-gold), var(--sacred-saffron));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 40%;
+            padding: 2rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            padding-right: 5rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            padding-left: 5rem;
+            text-align: left;
+        }
+
+        .timeline-image {
+            width: 40%;
+            position: relative;
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 4px solid var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sacred-saffron);
+            font-size: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-icon {
+            margin-left: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            margin-right: auto;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .timeline-content .time {
+            color: var(--sacred-saffron);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Event Details */
+        .event-details {
+            background: var(--warm-gray);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .details-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .details-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .details-card:hover::before {
+            left: 100%;
+        }
+
+        .details-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+        }
+
+        .details-card .icon {
+            font-size: 3rem;
+            color: var(--sacred-saffron);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-gold), var(--sacred-saffron));
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .details-card:hover .icon {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .details-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .details-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .venue-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--sacred-saffron);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .venue-link:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .details-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 80px;
+            }
+
+            .timeline-content,
+            .timeline-image {
+                width: 100%;
+            }
+
+            .timeline-content {
+                text-align: left !important;
+                padding: 1rem 0 !important;
+            }
+
+            .timeline-icon {
+                left: 30px;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-content {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .details-card {
+                padding: 2rem;
+            }
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo serif">
+                <i class="fas fa-ring"></i>
+                J & M
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="haldi.html">Haldi</a></li>
+                <li><a href="sangeet.html">Sangeet</a></li>
+                <li><a href="wedding-ceremony.html" class="active">Wedding Ceremony</a></li>
+                <li><a href="reception.html">Reception</a></li>
+                <li><a href="https://www.zola.com/wedding/michaelandternjyot/rsvp" target="_blank">RSVP</a></li>
+                <li><a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1749149795782&key=GRP&app=resvlink" target="_blank">Accommodations</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="gurmukhi">ੴ<br>ਧੰਨ ਪੁਰੇ ਏਹਿ ਨ ਆਖੀਅਨਿ ਬਹਨਿ ਇਕਠੇ ਹੋਇਆ<br>ਏਕ ਜੋਤਿ ਦੁਇ ਮੂਰਤੀ ਧਨ ਪਿਰੁ ਕਹੀਐ ਸੋਇਆ</div>
+            <div class="translation">Two persons sitting together do not make a couple, it's the unity of their thoughts as one soul makes them a couple<br>(Page 788 Shri Guru Granth Sahib)</div>
+            <h1 class="serif">Anand Karaj</h1>
+            <div class="subtitle">Wedding Ceremony</div>
+            <div class="invitation">Friday, September 26, 2025 • Mata Tripta Ji Gurdwara Sahib</div>
+            <a href="#ceremony-details" class="btn btn-primary">
+                <i class="fas fa-calendar"></i>
+                View Ceremony Details
+            </a>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="content-section dress-code">
+        <div class="container scroll-reveal">
+            <div class="section-title">
+                <h2 class="serif">Sacred Gathering Guidelines</h2>
+                <div class="decoration"></div>
+            </div>
+            <div class="dress-content">
+                <h3 class="serif">Sardar Gurnam Singh Khaira Solicits Your Gracious Presence and Blessings</h3>
+                <p><strong>Dress Code:</strong> Formal Western or Indian attire is appropriate. The ceremony will take place at the Sikh Temple. Head coverings and "modest clothing" covering the shoulders & knees is mandatory. Head coverings will be provided at the temple.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ceremony Timeline Section -->
+    <section class="content-section timeline" id="ceremony-details">
+        <div class="container scroll-reveal">
+            <div class="section-title">
+                <h2 class="serif">Sacred Ceremony Timeline</h2>
+                <div class="decoration"></div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="serif">Arrival of Barat</h3>
+                        <div class="time">9:00 AM</div>
+                        <p>The day begins with the arrival of the groom's party, known as the Baraat, who are welcomed by the bride's family outside the Gurdwara.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="images/barat.jpg" alt="Arrival of Barat ceremony">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-hands-praying"></i>
+                        </div>
+                        <h3 class="serif">Ardas & Milni</h3>
+                        <div class="time">9:30 AM</div>
+                        <p>Ardas & Milni is a respectful greeting ceremony that starts with a prayer. Key family members from both sides exchange garlands and warm embraces, signifying unity and mutual respect.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="images/Milni.jpg" alt="Ardas and Milni ceremony">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3 class="serif">Tea & Snacks</h3>
+                        <div class="time">10:00 AM</div>
+                        <p>A moment to refresh and gather strength for the sacred ceremonies ahead. Traditional refreshments are served to all guests.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="images/snacks.jpg" alt="Traditional refreshments">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="serif">Anand Karaj</h3>
+                        <div class="time">11:15 AM</div>
+                        <p>Anand Karaj (blissful union) - at the heart of the ceremony are the Laavaan, four hymns composed by Guru Ram Das Ji that outline the journey of marriage as a spiritual progression. With each Laav, the couple walks around the Guru Granth Sahib Ji.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="images/Anand-Karaj.jpg" alt="Sacred Anand Karaj ceremony">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="serif">Lunch</h3>
+                        <div class="time">12:30 PM</div>
+                        <p>A blessed vegetarian meal served to all guests as part of the sacred tradition of Langar (community kitchen).</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="images/food.jpg" alt="Traditional vegetarian feast">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-dove"></i>
+                        </div>
+                        <h3 class="serif">Dolli</h3>
+                        <div class="time">2:30 PM</div>
+                        <p>The formal departure of the bride, leaving her maternal family to begin her new journey with her husband's family.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="images/doli.jpg" alt="Traditional Dolli ceremony">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="content-section event-details">
+        <div class="container scroll-reveal">
+            <div class="section-title">
+                <h2 class="serif">Ceremony Information</h2>
+                <div class="decoration"></div>
+            </div>
+            <div class="details-grid">
+                <div class="details-card">
+                    <div class="icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 class="serif">Date & Time</h4>
+                    <p><strong>Friday, September 26, 2025</strong><br>
+                    Ceremony begins at 9:00 AM</p>
+                </div>
+                <div class="details-card">
+                    <div class="icon">
+                        <i class="fas fa-place-of-worship"></i>
+                    </div>
+                    <h4 class="serif">Sacred Venue</h4>
+                    <p><strong>Mata Tripta Ji Gurdwara Sahib</strong><br>
+                    40600 Schoolcraft Rd<br>
+                    Plymouth, MI 48170</p>
+                    <a href="https://maps.app.goo.gl/w1H1Ets1RWogUapK9" target="_blank" class="venue-link">
+                        <i class="fas fa-map"></i>
+                        Get Directions
+                    </a>
+                </div>
+                <div class="details-card">
+                    <div class="icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h4 class="serif">Sacred Traditions</h4>
+                    <p>Experience the beautiful traditions of Sikh wedding ceremonies, including the four sacred Laavs and community blessings.</p>
+                </div>
+                <div class="details-card">
+                    <div class="icon">
+                        <i class="fas fa-heart-circle-check"></i>
+                    </div>
+                    <h4 class="serif">Community Feast</h4>
+                    <p>Blessed vegetarian meal (Langar) will be served to all guests as part of our sacred tradition of sharing and community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ternjyot & Michael Wedding</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('revealed');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Run on initial load
+
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '2rem';
+                navLinks.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html> 
